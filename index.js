@@ -1,1 +1,1 @@
-module.exports =  require('./lib/node-c-lexer');
+module.exports = require('./lib/node-c-lexer');

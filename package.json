@@ -4,7 +4,7 @@
   "description": "NodeJS library to get token stream from C code.",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "node_modules/mocha/bin/mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -22,16 +22,15 @@
   },
   "homepage": "https://github.com/taufique71/node-c-lexer",
   "dependencies": {
-    "async": "^1.5.1",
-    "jison": "^0.4.15",
+    "flat": "^5.0.1",
     "lex": "^1.7.9",
-    "uuid": "^2.0.1"
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
-    "assert": "^1.4.1",
-    "async": "^1.5.2",
-    "chai": "^3.5.0",
-    "diff": "^3.0.1",
-    "mocha": "^2.3.4"
+    "assert": "^2.0.0",
+    "async": "^3.2.0",
+    "chai": "^4.2.0",
+    "diff": "^4.0.2",
+    "mocha": "^8.1.3"
   }
 }
