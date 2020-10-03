@@ -1,9 +1,6 @@
 const fs = require('fs');
 const diff = require('diff');
-const async = require('async');
-const assert = require('chai').assert;
-const expect = require('chai').expect;
-const should = require('chai').should();
+const { assert } = require('chai');
 
 const cases = ['case_1', 'case_2', 'case_3', 'case_4'];
 describe('Tests for preprocessor removal unit', () => {
