@@ -10,15 +10,8 @@ preprocessor with it and then feed it to scanning unit to get token stream.
 ##### Preprocessing Unit
 To use preprocessing unit C code needs to be resided in a file.
 ```js
-var lexer = require("node-c-lexer");
-lexer.cppUnit.clearPreprocessors("./a.c", function(err, codeText){
-    if(err){
-        /* Some error occured */
-    }
-    else{
-        /* Do what you want to do with preprocessor free code text */
-    }
-});
+const lexer = require("node-c-lexer");
+const codeText = await lexer.cppUnit.clearPreprocessors("./a.c");
 ```
 The clearPreprocessors method by default invokes `cpp` on the first arguement,
 producing an intermediate preprocessed file. It then finalizes the output by stripping
@@ -33,21 +26,14 @@ separate environment on which your .ii(s) are generated(e.g preprocessed files a
 within your windows bash environment). Or if your preprocessing pass diverges from
 the execution of a simple 'cpp' command in general.
 ```js
-var lexer = require("node-c-lexer");
-lexer.cppUnit.clearPreprocessors("./a.c", function(err, codeText){
-    if(err){
-        /* Some error occured */
-    }
-    else{
-        /* Do what you want to do with preprocessor free code text */
-    }
-}, "./a.ii");
+const lexer = require("node-c-lexer");
+const codeText = await lexer.cppUnit.clearPreprocessors("./a.c", "./a.ii");
 ```
 
 ##### Scanning Unit
 ```js
-var lexer = require("node-c-lexer");
-var tokenStream = lexer.lexUnit.tokenize(codeText);
+const lexer = require("node-c-lexer");
+const tokenStream = lexer.lexUnit.tokenize(codeText);
 /* Now do what you want with token stream */
 ```
 Token stream is actually an array of tokens. Single token is a single javascript
